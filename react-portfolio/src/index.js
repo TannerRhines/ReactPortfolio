@@ -7,7 +7,7 @@ import Header from './Header';
 const Main = () => {
   return (
     <div>
-      <Header title="My App Title" />
+      <Header title="Tanner Rhines" />
       {/* {where other components will go} */}
     </div>
   );
