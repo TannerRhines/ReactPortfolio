@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import AboutMe from './AboutMe';
 import Header from './Header'; 
 import NavBar from './NavBar';
 
@@ -10,6 +11,7 @@ const Main = () => {
     <div>
       <Header title="Tanner Rhines" />
       <NavBar />
+      <AboutMe />
       {/* {where other components will go} */}
     </div>
   );
