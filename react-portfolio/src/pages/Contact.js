@@ -17,9 +17,9 @@ export default function Contact() {
 
     if (validateEmail(email)) {
       setEmailError(false);
-      
+
       try {
-        const response = await axios.post('http://localhost:3000/send-email', {
+        const response = await axios.post('http://localhost:3001/send-email', {
           name,
           email,
           message,
@@ -32,8 +32,6 @@ export default function Contact() {
       setEmailError(true);
     }
   }
-
-
 
   return (
     <div>
@@ -60,3 +58,4 @@ export default function Contact() {
     </div>
   );
 }
+

@@ -1,26 +1,42 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
+
 const cors = require('cors');
 
-dotenv.config();
+require('dotenv').config({ path: './.env' });
+
+const result = require('dotenv').config();
+console.log(result.parsed);
+
 
 const app = express();
 
-app.use(cors());
+// Define cors options
+const corsOptions = {
+    origin: 'http://localhost:3002',
+    methods: 'POST',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
+
+// Using cors middleware with the defined options
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'ProtonMail', // Update this to the service you are using
+    service: 'gmail',
     auth: {
+      type: 'login',
       user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD,
     },
   });
+  
+
 
   const mailOptions = {
     from: email,
@@ -37,6 +53,10 @@ app.post('/send-email', async (req, res) => {
     res.status(500).send('Error sending email');
   }
 });
+
+console.log(process.env.EMAIL_USERNAME);
+console.log(process.env.EMAIL_PASSWORD);
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
