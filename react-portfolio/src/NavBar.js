@@ -1,25 +1,30 @@
-
-
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  return <nav className="nav">
-    <a href="/" className="site-title"> Tanner Rhines </a>
-    <ul>
-      <li>
-        <a href="/about"> about </a>
-      </li>
-      <li> 
-        <a href="/portfolio"> portfolio </a>
-      </li>
-      <li>
-        <a href="/contact"> contact </a>
-      </li>
-      <li>
-      <a href="/resume"> resume </a>
-      </li>
-    </ul>
-  </nav>
+  return (
+    <nav className="nav">
+      <Link to="/" className="tanner-site">
+        Tanner Rhines
+      </Link>
+
+      <ul>
+        <CustomLink to="/about">about</CustomLink>
+        <CustomLink to="/portfolio">portfolio</CustomLink>
+        <CustomLink to="/contact">contact</CustomLink>
+        <CustomLink to="/resumet">resume</CustomLink>
+      </ul>
+    </nav>
+  );
 }
 
+function CustomLink({ to, children, ...props }) {
+  const path = window.location.pathname;
 
-// about me, portfolio, contact, resume
+  return (
+    <li className={path === to ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  );
+}
