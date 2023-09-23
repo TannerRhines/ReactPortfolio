@@ -17,7 +17,10 @@ export default function Resume() {
           <ul>
             <li>AWS Certified Cloud Practitioner</li>
             <li>AWS Certified Solutions Architect - Associate</li>
+            
+
           </ul>
+          <li className="sideNote"> currently studying for Architect Professional and Security Specialty</li>
         </section>
         
         <section>

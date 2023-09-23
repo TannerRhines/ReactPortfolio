@@ -76,3 +76,9 @@ p {
     box-sizing: border-box;
   }
   
+
+.sideNote {
+    color: rgb(106, 105, 105);
+    opacity: 50%;
+    list-style-type: none;
+}
