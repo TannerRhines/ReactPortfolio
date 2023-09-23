@@ -6,7 +6,7 @@ export default function Navbar() {
     <a href="/" className="site-title"> Tanner Rhines </a>
     <ul>
       <li>
-        <a href="/about"> about me </a>
+        <a href="/about"> about </a>
       </li>
       <li> 
         <a href="/portfolio"> portfolio </a>
