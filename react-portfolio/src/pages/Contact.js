@@ -7,6 +7,7 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState(false);
+  const [emailSent, setEmailSent] = useState(false); // Moved inside the component
 
   const validateEmail = (email) => {
     const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -15,10 +16,10 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (validateEmail(email)) {
       setEmailError(false);
-  
+
       try {
         const response = await axios.post('http://localhost:3001/send-email', {
           name,
@@ -26,19 +27,21 @@ export default function Contact() {
           message,
         });
         console.log('Email sent successfully:', response.data);
-        
-        // Clear the form after email sent
+
+        // Clear the form fields and set emailSent to true
         setName('');
         setEmail('');
         setMessage('');
+        setEmailSent(true);
+
       } catch (error) {
         console.error('Error sending email:', error);
+        setEmailSent(false);
       }
     } else {
       setEmailError(true);
     }
   }
-  
 
   return (
     <div className="contact-container">
@@ -75,10 +78,8 @@ export default function Contact() {
         </div>
         {emailError && <p style={{ color: 'red' }}>Invalid email address</p>}
         <button type="submit" className="submit-button">Submit</button>
+        {emailSent && <p style={{ color: 'green' }}>your email was sent 😊</p>}
       </form>
     </div>
   );
 }
-
-
-
