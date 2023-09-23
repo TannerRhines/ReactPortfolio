@@ -67,3 +67,12 @@ p {
         padding: 30px;
     
 }
+
+
+.resume-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px; /* Adjust as needed */
+    box-sizing: border-box;
+  }
+  
