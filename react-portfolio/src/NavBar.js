@@ -1,16 +1,25 @@
-import React from 'react';
 
-const NavBar = () => {
-  return (
-    <nav>
-      <ul>
-        <li><a href="/"> about me </a></li>
-        <li><a href="/about"> portfolio </a></li>
-        <li><a href="/services"> contact</a></li>
-        <li><a href="/contact"> resume</a></li>
-      </ul>
-    </nav>
-  );
-};
 
-export default NavBar;
+
+export default function Navbar() {
+  return <nav className="nav">
+    <a href="/" className="site-title"> Tanner Rhines </a>
+    <ul>
+      <li>
+        <a href="/about"> about me </a>
+      </li>
+      <li> 
+        <a href="/portfolio"> portfolio </a>
+      </li>
+      <li>
+        <a href="/contact"> contact </a>
+      </li>
+      <li>
+      <a href="/resume"> resume </a>
+      </li>
+    </ul>
+  </nav>
+}
+
+
+// about me, portfolio, contact, resume
