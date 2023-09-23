@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Contact.css';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -34,28 +35,44 @@ export default function Contact() {
   }
 
   return (
-    <div>
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-        </label>
-        <br />
-        <label>
-          Email Address:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </label>
-        <br />
-        <label>
-          Message:
-          <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-        </label>
-        <br />
+    <div className="contact-container">
+      <h1> feel free to reach out </h1>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input 
+            type="text" 
+            id="name"
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            required 
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email Address:</label>
+          <input 
+            type="email" 
+            id="email"
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message:</label>
+          <textarea 
+            id="message"
+            value={message} 
+            onChange={(e) => setMessage(e.target.value)} 
+            required 
+          />
+        </div>
         {emailError && <p style={{ color: 'red' }}>Invalid email address</p>}
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );
 }
+
+
 
