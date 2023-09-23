@@ -15,10 +15,10 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (validateEmail(email)) {
       setEmailError(false);
-
+  
       try {
         const response = await axios.post('http://localhost:3001/send-email', {
           name,
@@ -26,6 +26,11 @@ export default function Contact() {
           message,
         });
         console.log('Email sent successfully:', response.data);
+        
+        // Clear the form after email sent
+        setName('');
+        setEmail('');
+        setMessage('');
       } catch (error) {
         console.error('Error sending email:', error);
       }
@@ -33,6 +38,7 @@ export default function Contact() {
       setEmailError(true);
     }
   }
+  
 
   return (
     <div className="contact-container">
