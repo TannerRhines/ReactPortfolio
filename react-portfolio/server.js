@@ -40,7 +40,7 @@ app.post('/send-email', async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'tannerrhines@protonmail.com',
+    to: process.env.EMAIL_USERNAME,
     subject: 'New Message from Contact Form',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
