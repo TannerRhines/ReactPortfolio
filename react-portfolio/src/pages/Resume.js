@@ -1,4 +1,8 @@
+import resumePdf from '../assets/TannerRhinesResume.pdf';
+
+
 export default function Resume() {
+
     return (
       <div className="resume-container">
         <h1>Resume</h1>
@@ -47,6 +51,13 @@ export default function Resume() {
             <li>REST</li>
             <li>GraphQL</li>
           </ul>
+        </section>
+
+
+        <section>
+          <a href={resumePdf} download="Tanner-Resume.pdf" className="btn btn-primary">
+            Download Resume
+          </a>
         </section>
         
       </div>
