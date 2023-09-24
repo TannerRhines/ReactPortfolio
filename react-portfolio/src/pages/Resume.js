@@ -4,7 +4,7 @@ export default function Resume() {
         <h1>Resume</h1>
         
         <section>
-          <h2>Education</h2>
+          <h3>Education</h3>
           <ul> 
           <li>UC Berkeley Extension Coding Bootcamp</li>
           
@@ -13,7 +13,7 @@ export default function Resume() {
         </section>
         
         <section>
-          <h2>Certifications</h2>
+          <h3>Certifications</h3>
           <ul>
             <li>AWS Certified Cloud Practitioner</li>
             <li>AWS Certified Solutions Architect - Associate</li>
@@ -24,7 +24,7 @@ export default function Resume() {
         </section>
         
         <section>
-          <h2>Front-end Proficiencies</h2>
+          <h3>Front-end Proficiencies</h3>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -37,7 +37,7 @@ export default function Resume() {
         </section>
         
         <section>
-          <h2>Back-end Proficiencies</h2>
+          <h3>Back-end Proficiencies</h3>
           <ul>
             <li>APIs</li>
             <li>NodeJS</li>
