@@ -1,0 +1,27 @@
+/* Footer.css */
+.sticky-footer {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0; 
+    position: fixed; 
+    bottom: 0; 
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1)
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-media-links a {
+    margin: 0 15px; 
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+  }
+  
+  .social-media-links a:hover {
+    text-decoration: underline; 
+  }
+  
