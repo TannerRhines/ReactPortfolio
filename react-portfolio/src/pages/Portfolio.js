@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from './Project'; 
-
+import eyeballs from '../assets/images/eyeballs.png';
+import runner from '../assets/images/runner.png';
 
 export default function Portfolio() {
     return (
@@ -8,16 +9,32 @@ export default function Portfolio() {
             <h1>Portfolio</h1>
             <div className="projects-container">
                 <Project 
-                    imageSrc="path-to-your-project-image-1" 
-                    caption="Project 1" 
+                    imageSrc={eyeballs} 
+                    caption="eyeballs" 
                     projectLink=""
                 />
+               
+            </div>
+
+
+            <div className="projects-container">
                 <Project 
-                    imageSrc="path-to-your-project-image-2" 
-                    caption="Project 2" 
+                    imageSrc={runner} 
+                    caption="eyeballs" 
                     projectLink=""
                 />
-                {/* Add more Project components as needed */}
+               
+            </div>
+
+
+
+            <div className="projects-container">
+                <Project 
+                    imageSrc={runner} 
+                    caption="eyeballs" 
+                    projectLink=""
+                />
+               
             </div>
         </div>
     );
