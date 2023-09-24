@@ -54,8 +54,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-console.log(process.env.EMAIL_USERNAME);
-console.log(process.env.EMAIL_PASSWORD);
+
 
 
 const PORT = process.env.PORT || 3001;
