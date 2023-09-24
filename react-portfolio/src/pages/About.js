@@ -1,3 +1,6 @@
+import world from '../assets/images/world.png'; 
+
+
 export default function About() {
     return (
         <div>
@@ -11,6 +14,11 @@ export default function About() {
         
             <p> 🎨 In my personal life, I like to create art. I have exhibited work internationally in places like Dubai and South Korea. One of my works is currently on display at Seattle-Tacoma International Airport, and I am starting to show work at Comic Con in San Diego. I believe my attention to detail and creative thinking will help make me into a better coder. </p>
         
+            <p> 📍 I currently live in my hometown of Fairbanks, Alaska</p>
+
+            <div style={{textAlign: 'center', margin: '20px 0'}}>
+                <img src={world} alt="Description" style={{maxWidth: '50px', maxHeight: '50px'}} />
+            </div>
         </div>
     );
 }
