@@ -4,10 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import eyeballs from '../assets/images/eyeballs.png';
 import runner from '../assets/images/runner.png';
+import artSite from '../assets/images/art.png';
 
 const projects = [
-  { imageSrc: runner, altText: "Description 1", caption: "Project 1", projectLink: "link-to-your-project-1" },
-  { imageSrc: eyeballs, altText: "Description 2", caption: "Project 2", projectLink: "link-to-your-project-2" },
+  { imageSrc: runner, altText: "Description 1", caption: "C++ Runner", projectLink: "link-to-your-project-1" },
+  { imageSrc: eyeballs, altText: "Description 2", caption: "Interactive Eyeballs", projectLink: "link-to-your-project-2" },
+  { imageSrc: artSite, altText: "Description 2", caption: "Art Website", projectLink: "link-to-your-project-2" }
 ];
 
 export default function Portfolio() {
