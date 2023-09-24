@@ -7,11 +7,19 @@ import Resume from "./pages/Resume";
 import { Route, Routes } from "react-router-dom";
 import Footer from './pages/Footer';
 
+import BackgroundVideo from './assets/skyVideo.mp4';
+
 function App() {
   return (
     <>
       <Navbar />
       <div className="container">
+      <div className="video-container">
+        <video autoPlay loop muted className="background-video">
+          <source src={BackgroundVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
