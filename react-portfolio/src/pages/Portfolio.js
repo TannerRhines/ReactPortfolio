@@ -7,9 +7,9 @@ import runner from '../assets/images/runner.png';
 import artSite from '../assets/images/art.png';
 
 const projects = [
-  { imageSrc: runner, altText: "Description 1", caption: "C++ Runner", projectLink: "link-to-your-project-1" },
-  { imageSrc: eyeballs, altText: "Description 2", caption: "Interactive Eyeballs", projectLink: "link-to-your-project-2" },
-  { imageSrc: artSite, altText: "Description 2", caption: "Art Website", projectLink: "link-to-your-project-2" }
+  { imageSrc: runner, altText: "runner", caption: "C++ Runner", projectLink: "https://github.com/TannerRhines/PixelRPG" },
+  { imageSrc: eyeballs, altText: "interactive eyeballs", caption: "Interactive Eyeballs", projectLink: "https://tannerrhines.github.io/InteractiveEyeballs/" },
+  { imageSrc: artSite, altText: "art website", caption: "Art Website", projectLink: "https://tannerrhines.com" }
 ];
 
 export default function Portfolio() {
