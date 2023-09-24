@@ -1,15 +1,16 @@
 import React from 'react';
-import './Project.css';
 
-function Project({ imageSrc, caption, projectLink }) {
-    return (
-        <div className="project-item">
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
-                <img src={imageSrc} alt={caption} />
-            </a>
-            <p>{caption}</p>
-        </div>
-    );
+function Project({ imageSrc, altText, caption, projectLink }) {
+  return (
+    <div className="col-12 col-sm-6 col-md-4">
+      <figure>
+        <a className="d-block" href={projectLink}>
+          <img src={imageSrc} alt={altText} className="img-fluid" />
+        </a>
+        <figcaption>{caption}</figcaption>
+      </figure>
+    </div>
+  );
 }
 
 export default Project;
