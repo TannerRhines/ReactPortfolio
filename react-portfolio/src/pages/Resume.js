@@ -55,7 +55,7 @@ export default function Resume() {
 
 
         <section>
-          <a href={resumePdf} download="Tanner-Resume.pdf" className="btn btn-primary">
+          <a href={resumePdf} download="TannerRhines-Resume.pdf" className="btn btn-primary">
             Download Resume
           </a>
         </section>
