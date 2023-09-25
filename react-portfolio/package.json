@@ -23,11 +23,13 @@
   },
   "scripts": {
     "start": "PORT=3002 react-scripts start",
+    "build": "react-scripts build",
     "server": "node server.js",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
