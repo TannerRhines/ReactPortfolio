@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Contact.css';
+
+import '../assets/styles/Contact.css';
+
+
 
 export default function Contact() {
   const [name, setName] = useState('');

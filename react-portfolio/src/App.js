@@ -1,11 +1,11 @@
-import Navbar from "./NavBar";
+import Navbar from "./Components/NavBar";
 
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
+import About from "./Components/About";
+import Portfolio from "./Components/Portfolio";
+import Contact from "./Components/Contact";
+import Resume from "./Components/Resume";
 import { Route, Routes } from "react-router-dom";
-import Footer from './pages/Footer';
+import Footer from './Components/Footer';
 
 import BackgroundVideo from './assets/skyVideo.mp4';
 
