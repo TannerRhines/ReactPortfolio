@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
 import '../assets/styles/Contact.css';
-
-
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState(false);
-  const [emailSent, setEmailSent] = useState(false); // Moved inside the component
+  const [emailSent, setEmailSent] = useState(false);
+
+  // State to track whether fields have been touched
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
 
   const validateEmail = (email) => {
     const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -30,8 +34,6 @@ export default function Contact() {
           message,
         });
         console.log('Email sent successfully:', response.data);
-
-        // Clear the form fields and set emailSent to true
         setName('');
         setEmail('');
         setMessage('');
@@ -46,6 +48,10 @@ export default function Contact() {
     }
   }
 
+  const handleBlur = (field) => {
+    setTouched({ ...touched, [field]: true });
+  }
+
   return (
     <div className="contact-container">
       <h1> feel free to reach out </h1>
@@ -56,9 +62,11 @@ export default function Contact() {
             type="text" 
             id="name"
             value={name} 
-            onChange={(e) => setName(e.target.value)} 
+            onChange={(e) => setName(e.target.value)}
+            onBlur={() => handleBlur('name')}
             required 
           />
+          {touched.name && !name && <p style={{ color: 'red' }}>This field is required</p>}
         </div>
         <div className="form-group">
           <label htmlFor="email">Email Address:</label>
@@ -66,22 +74,26 @@ export default function Contact() {
             type="email" 
             id="email"
             value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={() => handleBlur('email')}
             required 
           />
+          {touched.email && !email && <p style={{ color: 'red' }}>This field is required</p>}
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea 
             id="message"
             value={message} 
-            onChange={(e) => setMessage(e.target.value)} 
+            onChange={(e) => setMessage(e.target.value)}
+            onBlur={() => handleBlur('message')}
             required 
           />
+          {touched.message && !message && <p style={{ color: 'red' }}>This field is required</p>}
         </div>
         {emailError && <p style={{ color: 'red' }}>Invalid email address</p>}
         <button type="submit" className="submit-button">Submit</button>
-        {emailSent && <p style={{ color: 'green' }}>your email was sent 😊</p>}
+        {emailSent && <p style={{ color: 'green' }}>Your email was sent 😊</p>}
       </form>
     </div>
   );
