@@ -14,18 +14,20 @@ function App() {
     <>
       <Navbar />
       <div className="container">
-      <div className="video-container">
-        <video autoPlay loop muted className="background-video">
-          <source src={BackgroundVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+        <div className="video-container">
+        <video autoPlay loop muted playsInline className="background-video">
+  <source src={BackgroundVideo} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+        </div>
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<About />} /> {/* Catch all undefined routes and redirect to About */}
         </Routes>
       </div>
       <Footer />

@@ -8,8 +8,7 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
-
-  // State to track whether fields have been touched
+  
   const [touched, setTouched] = useState({
     name: false,
     email: false,
@@ -23,12 +22,13 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
 
     if (validateEmail(email)) {
       setEmailError(false);
 
       try {
-        const response = await axios.post('http://localhost:3001/send-email', {
+        const response = await axios.post(`${backendUrl}/send-email`, {
           name,
           email,
           message,
@@ -37,8 +37,8 @@ export default function Contact() {
         setName('');
         setEmail('');
         setMessage('');
+        setTouched({ name: false, email: false, message: false });
         setEmailSent(true);
-
       } catch (error) {
         console.error('Error sending email:', error);
         setEmailSent(false);

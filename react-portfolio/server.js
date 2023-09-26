@@ -1,26 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-
 const cors = require('cors');
-
+const path = require('path');
 require('dotenv').config({ path: './.env' });
-
-const result = require('dotenv').config();
-console.log(result.parsed);
-
 
 const app = express();
 
-// Define cors options
 const corsOptions = {
-    origin: 'http://localhost:3002',
-    methods: 'POST',
-    credentials: true,
-    optionsSuccessStatus: 204,
-  };
+  origin: true, 
+  methods: 'POST',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 
-// Using cors middleware with the defined options
+app.use(cors());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
@@ -35,8 +29,6 @@ app.post('/send-email', async (req, res) => {
       pass: process.env.EMAIL_PASSWORD,
     },
   });
-  
-
 
   const mailOptions = {
     from: email,
@@ -54,8 +46,12 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, 'build')));
 
-
+app.get('*', (req, res) => {
+  const filePath = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(filePath);
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
