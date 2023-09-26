@@ -1,23 +1,33 @@
 {
   "files": {
-    "main.css": "/ReactPortfolio/static/css/main.5ac88fee.css",
-    "main.js": "/ReactPortfolio/static/js/main.1eadb621.js",
-    "static/media/skyVideo.mp4": "/ReactPortfolio/static/media/skyVideo.914ca667d6c73ac3b6ef.mp4",
-    "static/media/tannerAvi.png": "/ReactPortfolio/static/media/tannerAvi.3f7b65704df4242d39ff.png",
-    "static/media/tux.png": "/ReactPortfolio/static/media/tux.dc71a0fcda1ee1d81cd5.png",
-    "static/media/art.png": "/ReactPortfolio/static/media/art.3ef842056578a2892bb1.png",
-    "static/media/eyeballs.png": "/ReactPortfolio/static/media/eyeballs.48e77211f8e9b681cbef.png",
-    "static/media/weathermap.png": "/ReactPortfolio/static/media/weathermap.bff7e2cd2bad39f86d63.png",
-    "static/media/mongoDB.png": "/ReactPortfolio/static/media/mongoDB.d0d7792d8ae9d3ccd6cd.png",
-    "static/media/runner.png": "/ReactPortfolio/static/media/runner.5561532ddd5e8d57c3aa.png",
-    "static/media/TannerRhinesResume.pdf": "/ReactPortfolio/static/media/TannerRhinesResume.54b66377ba94d1e4246c.pdf",
-    "static/media/world.png": "/ReactPortfolio/static/media/world.9de5c6b0601f5006748b.png",
+    "main.css": "/ReactPortfolio/static/css/main.ffcdfde9.chunk.css",
+    "main.js": "/ReactPortfolio/static/js/main.81b7bfcd.chunk.js",
+    "main.js.map": "/ReactPortfolio/static/js/main.81b7bfcd.chunk.js.map",
+    "runtime-main.js": "/ReactPortfolio/static/js/runtime-main.b3454083.js",
+    "runtime-main.js.map": "/ReactPortfolio/static/js/runtime-main.b3454083.js.map",
+    "static/css/2.c374eb44.chunk.css": "/ReactPortfolio/static/css/2.c374eb44.chunk.css",
+    "static/js/2.ba87bab7.chunk.js": "/ReactPortfolio/static/js/2.ba87bab7.chunk.js",
+    "static/js/2.ba87bab7.chunk.js.map": "/ReactPortfolio/static/js/2.ba87bab7.chunk.js.map",
     "index.html": "/ReactPortfolio/index.html",
-    "main.5ac88fee.css.map": "/ReactPortfolio/static/css/main.5ac88fee.css.map",
-    "main.1eadb621.js.map": "/ReactPortfolio/static/js/main.1eadb621.js.map"
+    "static/css/2.c374eb44.chunk.css.map": "/ReactPortfolio/static/css/2.c374eb44.chunk.css.map",
+    "static/css/main.ffcdfde9.chunk.css.map": "/ReactPortfolio/static/css/main.ffcdfde9.chunk.css.map",
+    "static/js/2.ba87bab7.chunk.js.LICENSE.txt": "/ReactPortfolio/static/js/2.ba87bab7.chunk.js.LICENSE.txt",
+    "static/media/TannerRhinesResume.54b66377.pdf": "/ReactPortfolio/static/media/TannerRhinesResume.54b66377.pdf",
+    "static/media/art.3ef84205.png": "/ReactPortfolio/static/media/art.3ef84205.png",
+    "static/media/eyeballs.48e77211.png": "/ReactPortfolio/static/media/eyeballs.48e77211.png",
+    "static/media/mongoDB.d0d7792d.png": "/ReactPortfolio/static/media/mongoDB.d0d7792d.png",
+    "static/media/runner.5561532d.png": "/ReactPortfolio/static/media/runner.5561532d.png",
+    "static/media/skyVideo.914ca667.mp4": "/ReactPortfolio/static/media/skyVideo.914ca667.mp4",
+    "static/media/tannerAvi.3f7b6570.png": "/ReactPortfolio/static/media/tannerAvi.3f7b6570.png",
+    "static/media/tux.dc71a0fc.png": "/ReactPortfolio/static/media/tux.dc71a0fc.png",
+    "static/media/weathermap.bff7e2cd.png": "/ReactPortfolio/static/media/weathermap.bff7e2cd.png",
+    "static/media/world.9de5c6b0.png": "/ReactPortfolio/static/media/world.9de5c6b0.png"
   },
   "entrypoints": [
-    "static/css/main.5ac88fee.css",
-    "static/js/main.1eadb621.js"
+    "static/js/runtime-main.b3454083.js",
+    "static/css/2.c374eb44.chunk.css",
+    "static/js/2.ba87bab7.chunk.js",
+    "static/css/main.ffcdfde9.chunk.css",
+    "static/js/main.81b7bfcd.chunk.js"
   ]
 }
