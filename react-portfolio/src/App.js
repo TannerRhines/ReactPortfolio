@@ -7,7 +7,7 @@ import Resume from "./Components/Resume";
 import { Route, Routes } from "react-router-dom";
 import Footer from './Components/Footer';
 
-import BackgroundVideo from './assets/skyVideo.mp4';
+
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
       <div className="container">
         <div className="video-container">
         <video autoPlay loop muted playsInline className="background-video">
-  <source src={BackgroundVideo} type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/skyVideo.mp4'} type="video/mp4" />
+
   Your browser does not support the video tag.
 </video>
 
